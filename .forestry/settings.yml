@@ -4,11 +4,14 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: content/portfolio
-  label: Portfolio
-  create: none
-  match: "*"
+- type: document
+  path: localevents
+  label: Local events
+  match: "**/*"
+- type: document
+  path: faq
+  label: faq
+  match: "**/*"
 - type: directory
   path: content/blog
   label: Post
@@ -17,21 +20,11 @@ sections:
   templates:
   - post
 - type: directory
-  path: content/about
-  label: About
-  create: none
-  match: "*"
-- type: directory
   path: data
   label: Data
   create: documents
   match: "*"
   new_doc_ext: yml
-- type: directory
-  path: content/contact
-  label: Contact
-  create: none
-  match: "*"
 - type: document
   path: config.toml
   label: Configuration
